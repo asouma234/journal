@@ -8,406 +8,607 @@
 </head>
 <body>
 
-  <!-- Barre du haut -->
-  <header class="topbar">
-    <div class="brand">
-      <span class="logo">📰</span>
-      <div>
-        <div class="brand-title">LE JOURNAL SCOLAIRE</div>
-        <div class="brand-sub">Numéro 1 — Mars 2026</div>
-      </div>
+<!-- Barre de navigation (cliquable) -->
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">📰</div>
+    <div class="brand-text">
+      <div class="title">LE JOURNAL SCOLAIRE</div>
+      <div class="subtitle">Numéro 1 — Mars 2026</div>
     </div>
+  </div>
 
-    <nav class="nav">
-      <a href="#couverture">🏠 Couverture</a>
-      <a href="#editorial">✍️ Éditorial</a>
-      <a href="#etablissement">🏫 Établissement</a>
-      <a href="#personnalite">🌟 Personnalité</a>
-      <a href="#creatures">🐾 Créatures</a>
-      <a href="#saviezvous">💡 Le saviez-vous</a>
-      <a href="#culture">🔬 Culture & Science</a>
-      <a href="#viescolaire">🎒 Vie scolaire</a>
-      <a href="#detente">🎲 Détente</a>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a href="#p1">🏠</a>
+    <a href="#p2">✍️</a>
+    <a href="#p3">🏫</a>
+    <a href="#p4">🌟</a>
+    <a href="#p5">🐾</a>
+    <a href="#p6">💡</a>
+    <a href="#p7">🎒</a>
+    <a href="#p8">🎲</a>
+  </nav>
 
-  <!-- Mise en page globale -->
-  <main class="container">
+  <div class="tools">
+    <a class="btn small" href="#p2">Lire</a>
+    <a class="btn ghost small" href="#p8">Jeux</a>
+  </div>
+</header>
 
-    <!-- COUVERTURE -->
-    <section class="page cover" id="couverture">
+<main class="stack">
+
+  <!-- PAGE 1 : Couverture -->
+  <section class="page cover" id="p1">
+    <div class="cover-grid">
       <div class="cover-left">
-        <div class="pill">📌 Spécial : Vie scolaire & curiosités</div>
-        <h1>Notre école en lumière ✨</h1>
+        <div class="pill">✨ Édition spéciale : créativité & vie scolaire</div>
+        <h1>Notre école<br><span class="accent">en lumière</span> 🌤️</h1>
         <p class="lead">
-          Découvrez notre établissement, une personnalité inspirante, le monde des créatures,
-          des infos étonnantes, un coin culture & science et des jeux !
+          Un journal interactif : sommaire cliquable, cartes, onglets, quiz, devinettes,
+          mini-affiches… et un style “ciel + mer” pour l’énergie !
         </p>
 
-        <div class="cover-highlights">
-          <div class="mini-card">🌟 Personnalité : <strong>Mme Fatima Zahra</strong></div>
-          <div class="mini-card">🐾 Créature : <strong>Dauphin</strong></div>
-          <div class="mini-card">💡 Le saviez-vous : <strong>5 faits</strong></div>
-          <div class="mini-card">🎲 Détente : <strong>Devinettes</strong></div>
+        <div class="quick">
+          <a class="quick-card" href="#p4">
+            <div class="qc-emoji">🌟</div>
+            <div class="qc-title">Personnalité</div>
+            <div class="qc-sub">portrait + interview</div>
+          </a>
+
+          <a class="quick-card" href="#p5">
+            <div class="qc-emoji">🐾</div>
+            <div class="qc-title">Créatures</div>
+            <div class="qc-sub">monde animal</div>
+          </a>
+
+          <a class="quick-card" href="#p6">
+            <div class="qc-emoji">💡</div>
+            <div class="qc-title">Curiosités</div>
+            <div class="qc-sub">Le saviez-vous ?</div>
+          </a>
+
+          <a class="quick-card" href="#p8">
+            <div class="qc-emoji">🎲</div>
+            <div class="qc-title">Détente</div>
+            <div class="qc-sub">jeux + quiz</div>
+          </a>
         </div>
 
         <div class="cta-row">
-          <a class="btn" href="#editorial">➡️ Commencer la lecture</a>
-          <a class="btn ghost" href="#detente">🎮 Aller aux jeux</a>
+          <a class="btn" href="#p2">➡️ Commencer</a>
+          <a class="btn ghost" href="#p3">🏫 Découvrir l’établissement</a>
+        </div>
+
+        <div class="meta">
+          <div class="meta-badge">📅 Deadline : 6 mars</div>
+          <div class="meta-badge">📄 Format : A4</div>
+          <div class="meta-badge">🎨 Thème : Ciel & Mer</div>
         </div>
       </div>
 
       <div class="cover-right">
         <div class="poster">
           <div class="poster-top">
-            <div class="badge">📣 À la une</div>
-            <div class="date">06/03/2026</div>
+            <span class="tag">📣 À la une</span>
+            <span class="tag soft">🔗 Tout est cliquable</span>
           </div>
-          <div class="poster-art">
-            <div class="doodle star">✦</div>
-            <div class="doodle heart">❤</div>
-            <div class="doodle spark">✧</div>
-            <div class="avatar-big">🏫</div>
-            <p class="poster-text">Un numéro fait avec soin, créativité & esprit d’équipe.</p>
+
+          <div class="poster-body">
+            <div class="big-icon">🏫</div>
+            <div class="poster-lines">
+              <div class="line">🌊 Des idées fraîches</div>
+              <div class="line">☁️ Un design vivant</div>
+              <div class="line">✨ Un esprit d’équipe</div>
+            </div>
+
+            <div class="wave">
+              <!-- petite vague décorative -->
+              <svg viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,64 C120,90 240,110 360,90 C480,70 600,20 720,30 C840,40 960,110 1080,100 C1200,90 1320,50 1440,60 L1440,150 L0,150 Z"></path>
+              </svg>
+            </div>
           </div>
         </div>
 
-        <div class="team card">
-          <h2>👥 Rédigé par</h2>
+        <div class="card">
+          <div class="card-head">
+            <h2>👥 L’équipe du journal</h2>
+            <span class="chip">Staff officiel</span>
+          </div>
+
           <div class="people">
-            <div class="person">
-              <div class="avatar">AS</div>
-              <div>
-                <div class="name">Asmae Slitine Alaoui</div>
-                <div class="role">Responsable de la rédaction</div>
-              </div>
-            </div>
+            <button class="person" type="button" onclick="location.href='#p2'">
+              <span class="avatar">AS</span>
+              <span class="ptext">
+                <span class="pname">Asmae Slitine Alaoui</span>
+                <span class="prole">Responsable de la rédaction</span>
+              </span>
+              <span class="plink">↗</span>
+            </button>
 
-            <div class="person">
-              <div class="avatar">SA</div>
-              <div>
-                <div class="name">Saïda Oualladi</div>
-                <div class="role">Correcteur</div>
-              </div>
-            </div>
+            <button class="person" type="button" onclick="location.href='#p2'">
+              <span class="avatar">MA</span>
+              <span class="ptext">
+                <span class="pname">Meriem Ache</span>
+                <span class="prole">Responsable de la mise en page</span>
+              </span>
+              <span class="plink">↗</span>
+            </button>
 
-            <div class="person">
-              <div class="avatar">OM</div>
-              <div>
-                <div class="name">Oussama Mardi</div>
-                <div class="role">Coordinateur du projet</div>
-              </div>
-            </div>
+            <button class="person" type="button" onclick="location.href='#p2'">
+              <span class="avatar">SA</span>
+              <span class="ptext">
+                <span class="pname">Saïda Oualladi</span>
+                <span class="prole">Correcteur</span>
+              </span>
+              <span class="plink">↗</span>
+            </button>
 
-            <div class="person">
-              <div class="avatar">OB</div>
-              <div>
-                <div class="name">Oumayma Ben Reguigue</div>
-                <div class="role">Membre de la rédaction</div>
-              </div>
-            </div>
+            <button class="person" type="button" onclick="location.href='#p2'">
+              <span class="avatar">OM</span>
+              <span class="ptext">
+                <span class="pname">Oussama Mardi</span>
+                <span class="prole">Coordinateur du projet</span>
+              </span>
+              <span class="plink">↗</span>
+            </button>
 
-            <div class="person">
-              <div class="avatar">MA</div>
-              <div>
-                <div class="name">Meriem Ache</div>
-                <div class="role">Responsable de la mise en page</div>
-              </div>
-            </div>
+            <button class="person" type="button" onclick="location.href='#p2'">
+              <span class="avatar">OB</span>
+              <span class="ptext">
+                <span class="pname">Oumayma Ben Reguigue</span>
+                <span class="prole">Membre de la rédaction</span>
+              </span>
+              <span class="plink">↗</span>
+            </button>
+          </div>
+
+          <div class="note">
+            💡 Astuce : cliquez sur les cartes (elles ouvrent les pages correspondantes).
           </div>
         </div>
-
       </div>
-    </section>
+    </div>
 
-    <!-- ÉDITORIAL -->
-    <section class="page" id="editorial">
-      <div class="page-head">
-        <h2>✍️ Éditorial</h2>
-        <div class="chips">
-          <span class="chip">📚 Original</span>
-          <span class="chip">🎨 Créatif</span>
-          <span class="chip">🤝 Collaboratif</span>
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Numéro 1</span>
+      <span class="foot-right">Page 1</span>
+    </footer>
+  </section>
+
+  <!-- PAGE 2 : Editorial + sommaire cliquable + accordéon -->
+  <section class="page" id="p2">
+    <div class="header">
+      <h2>✍️ Éditorial & Sommaire</h2>
+      <div class="chips">
+        <span class="chip">🎯 Clair</span>
+        <span class="chip">✨ Créatif</span>
+        <span class="chip">🔗 Interactif</span>
+      </div>
+    </div>
+
+    <div class="cols">
+      <article class="card">
+        <h3>Mot de l’équipe</h3>
+        <p class="lead2">
+          Chers lecteurs, bienvenue dans notre premier numéro ! Nous avons voulu créer un journal
+          vivant, coloré et interactif. Bonne lecture et bon amusement ! 🌈
+        </p>
+        <div class="signature">— L’équipe du journal</div>
+
+        <div class="mini-strip">
+          <span class="badge">📌 Original</span>
+          <span class="badge">🧠 Informative</span>
+          <span class="badge">🎲 Détente</span>
         </div>
-      </div>
+      </article>
 
-      <div class="grid two">
-        <article class="card">
-          <h3>Mot de l’équipe</h3>
-          <p>
-            Chers lecteurs, nous sommes heureux de vous présenter notre premier numéro.
-            À travers ces pages, nous mettons en valeur notre établissement, ses activités,
-            et des rubriques enrichissantes mêlant culture, science et divertissement.
-          </p>
-          <p class="signature">— L’équipe du journal</p>
-        </article>
-
-        <aside class="card">
-          <h3>📌 Sommaire (cliquable)</h3>
-          <div class="toc">
-            <a href="#etablissement">🏫 Présentation de l’établissement</a>
-            <a href="#personnalite">🌟 Personnalité du numéro</a>
-            <a href="#creatures">🐾 Monde des créatures</a>
-            <a href="#saviezvous">💡 Le saviez-vous ?</a>
-            <a href="#culture">🔬 Culture & Science</a>
-            <a href="#viescolaire">🎒 Activités de la vie scolaire</a>
-            <a href="#detente">🎲 Coin détente</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ÉTABLISSEMENT -->
-    <section class="page" id="etablissement">
-      <div class="page-head">
-        <h2>🏫 Présentation de l’établissement</h2>
-        <div class="chips">
-          <span class="chip">📍 [Ville]</span>
-          <span class="chip">⭐ Valeurs</span>
+      <aside class="card">
+        <h3>📌 Sommaire cliquable</h3>
+        <div class="toc">
+          <a href="#p3">🏫 Présentation de l’établissement</a>
+          <a href="#p4">🌟 Personnalité du numéro</a>
+          <a href="#p5">🐾 Monde des créatures</a>
+          <a href="#p6">💡 Le saviez-vous ? + Culture & Science</a>
+          <a href="#p7">🎒 Activités de la vie scolaire</a>
+          <a href="#p8">🎲 Coin détente</a>
         </div>
-      </div>
 
-      <div class="grid three">
-        <div class="card">
-          <h3>✨ En bref</h3>
+        <div class="progress">
+          <div class="progress-title">📍 Navigation rapide</div>
+          <div class="progress-bar"><span style="width:16%"></span></div>
+          <div class="progress-sub">Cliquez sur une rubrique pour y aller.</div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="grid-3">
+      <details class="card details" open>
+        <summary>👥 Équipe du journal (clique pour ouvrir/fermer)</summary>
+        <ul class="list">
+          <li><strong>Responsable de la rédaction :</strong> Asmae Slitine Alaoui</li>
+          <li><strong>Responsable de la mise en page :</strong> Meriem Ache</li>
+          <li><strong>Correcteur :</strong> Saïda Oualladi</li>
+          <li><strong>Coordinateur du projet :</strong> Oussama Mardi</li>
+          <li><strong>Membre de la rédaction :</strong> Oumayma Ben Reguigue</li>
+        </ul>
+      </details>
+
+      <details class="card details">
+        <summary>🧩 Petit “Easter egg” : message secret</summary>
+        <p>
+          Si vous lisez ceci, vous faites partie des lecteurs les plus attentifs 😄✨
+          Bravo ! Continuez !
+        </p>
+      </details>
+
+      <details class="card details">
+        <summary>✅ Checklist (clique)</summary>
+        <ul class="list">
+          <li>Couverture + équipe</li>
+          <li>Éditorial + sommaire</li>
+          <li>Rubriques obligatoires complètes</li>
+          <li>Export PDF A4</li>
+        </ul>
+      </details>
+    </div>
+
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Éditorial</span>
+      <span class="foot-right">Page 2</span>
+    </footer>
+  </section>
+
+  <!-- PAGE 3 : Etablissement (onglets CSS) -->
+  <section class="page" id="p3">
+    <div class="header">
+      <h2>🏫 Présentation de l’établissement</h2>
+      <div class="chips">
+        <span class="chip">📍 [Ville]</span>
+        <span class="chip">🌿 Valeurs</span>
+        <span class="chip">⭐ Atouts</span>
+      </div>
+    </div>
+
+    <!-- Onglets (sans JS) -->
+    <div class="tabs">
+      <input type="radio" name="tabs1" id="t1" checked>
+      <label for="t1">✨ En bref</label>
+
+      <input type="radio" name="tabs1" id="t2">
+      <label for="t2">📚 Atouts</label>
+
+      <input type="radio" name="tabs1" id="t3">
+      <label for="t3">🎭 Clubs</label>
+
+      <div class="tab-panels">
+        <div class="tab-panel card">
+          <h3>En bref</h3>
           <ul class="list">
-            <li>📌 <strong>Nom :</strong> [Nom de l’établissement]</li>
-            <li>📍 <strong>Localisation :</strong> [Adresse / Ville]</li>
-            <li>🎯 <strong>Valeurs :</strong> respect, effort, réussite</li>
+            <li><strong>Nom :</strong> [Nom de l’établissement]</li>
+            <li><strong>Localisation :</strong> [Adresse / Ville]</li>
+            <li><strong>Objectif :</strong> former, accompagner, réussir</li>
           </ul>
-        </div>
-
-        <div class="card">
-          <h3>📚 Nos atouts</h3>
-          <ul class="list">
-            <li>👩‍🏫 Encadrement pédagogique</li>
-            <li>🎭 Activités culturelles</li>
-            <li>⚽ Clubs & sport</li>
-            <li>🧠 Projets & ateliers</li>
-          </ul>
-        </div>
-
-        <div class="card poster-small">
-          <h3>🎨 Mini-affiche</h3>
           <p class="muted">
-            « Ici, on apprend ensemble et on grandit ensemble. »
+            Remplacez les crochets [ ] par vos informations réelles.
           </p>
-          <div class="stickers">
-            <span>🌿</span><span>📖</span><span>✨</span><span>🤝</span>
+        </div>
+
+        <div class="tab-panel card">
+          <h3>Atouts</h3>
+          <div class="grid-2">
+            <div class="mini card softcard">👩‍🏫 Encadrement pédagogique</div>
+            <div class="mini card softcard">🧠 Projets & ateliers</div>
+            <div class="mini card softcard">🎨 Activités culturelles</div>
+            <div class="mini card softcard">⚽ Activités sportives</div>
+          </div>
+        </div>
+
+        <div class="tab-panel card">
+          <h3>Clubs (exemples)</h3>
+          <p>Choisissez ceux de votre établissement :</p>
+          <div class="pills">
+            <span class="pill2">📖 Club lecture</span>
+            <span class="pill2">🎭 Théâtre</span>
+            <span class="pill2">⚽ Sport</span>
+            <span class="pill2">🧪 Science</span>
+            <span class="pill2">🎨 Arts</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- PERSONNALITÉ -->
-    <section class="page" id="personnalite">
-      <div class="page-head">
-        <h2>🌟 Personnalité du numéro</h2>
-        <div class="chips">
-          <span class="chip">🎤 Interview</span>
-          <span class="chip">🏅 Inspirant</span>
-        </div>
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Établissement</span>
+      <span class="foot-right">Page 3</span>
+    </footer>
+  </section>
+
+  <!-- PAGE 4 : Personnalité (cartes retournables au survol) -->
+  <section class="page" id="p4">
+    <div class="header">
+      <h2>🌟 Personnalité du numéro</h2>
+      <div class="chips">
+        <span class="chip">🎤 Interview</span>
+        <span class="chip">🏅 Inspiration</span>
       </div>
+    </div>
 
-      <div class="grid two">
-        <article class="card">
-          <h3>👤 Portrait : [Nom]</h3>
-          <p><strong>Rôle :</strong> [Prof/Élève/Personnel]</p>
-          <p>
-            [Écrivez ici un portrait de 6–8 lignes : parcours, qualités, ce qu’on admire…]
-          </p>
-          <div class="quote">
-            “<em>[Une phrase inspirante / un conseil]</em>”
+    <div class="grid-2">
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-front card">
+            <h3>👤 Portrait : [Nom]</h3>
+            <p><strong>Rôle :</strong> [Prof/Élève/Personnel]</p>
+            <p>
+              [Écrivez un portrait de 6–8 lignes : parcours, qualités, ce qu’on admire…]
+            </p>
+            <div class="badge-row">
+              <span class="badge">✨ Exemple</span>
+              <span class="badge">🔎 Curiosité</span>
+              <span class="badge">🤝 Engagement</span>
+            </div>
+            <p class="muted">Survolez pour voir une citation ✨</p>
           </div>
-        </article>
 
-        <article class="card">
-          <h3>🎙 Mini-interview</h3>
-          <div class="qa">
-            <p><strong>Q1 :</strong> Depuis quand êtes-vous dans l’établissement ?<br><span class="muted">R :</span> …</p>
-            <p><strong>Q2 :</strong> Qu’est-ce qui vous motive le plus ?<br><span class="muted">R :</span> …</p>
-            <p><strong>Q3 :</strong> Un conseil aux élèves ?<br><span class="muted">R :</span> …</p>
+          <div class="flip-back card">
+            <h3>💬 Citation</h3>
+            <p class="quote">
+              “<em>[Une phrase inspirante de la personnalité]</em>”
+            </p>
+            <p class="muted">Revenez en arrière : retirez la souris.</p>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- MONDE DES CRÉATURES -->
-    <section class="page" id="creatures">
-      <div class="page-head">
-        <h2>🐾 Monde des créatures</h2>
-        <div class="chips">
-          <span class="chip">🌊 Océan</span>
-          <span class="chip">🧠 Intelligence</span>
         </div>
       </div>
 
-      <div class="grid two">
-        <article class="card">
-          <h3>🐬 Le dauphin</h3>
-          <ul class="list">
-            <li>🏠 <strong>Habitat :</strong> océans et mers</li>
-            <li>🍽 <strong>Alimentation :</strong> poissons, calamars</li>
-            <li>🧩 <strong>Fait étonnant :</strong> il communique avec des sons complexes</li>
-          </ul>
-          <p>
-            Le dauphin est un mammifère marin très sociable. Il vit en groupe et
-            peut apprendre rapidement. Il joue un rôle important dans l’équilibre de l’écosystème marin.
-          </p>
-        </article>
+      <div class="card">
+        <h3>🎙 Mini-interview (cliquable)</h3>
+        <details class="details">
+          <summary><strong>Q1 :</strong> Depuis quand êtes-vous dans l’établissement ?</summary>
+          <p><strong>R :</strong> …</p>
+        </details>
+        <details class="details">
+          <summary><strong>Q2 :</strong> Qu’est-ce qui vous motive le plus ?</summary>
+          <p><strong>R :</strong> …</p>
+        </details>
+        <details class="details">
+          <summary><strong>Q3 :</strong> Un conseil aux étudiants ?</summary>
+          <p><strong>R :</strong> …</p>
+        </details>
 
-        <div class="card animal-art">
-          <h3>🎨 Petit dessin (style sticker)</h3>
-          <div class="sticker">
-            <div class="sticker-emoji">🐬</div>
-            <div class="sticker-title">Dauphin</div>
-            <div class="sticker-sub">Ami des mers</div>
-          </div>
-          <p class="muted">Tu peux remplacer par un autre animal si vous préférez.</p>
+        <div class="mini-strip">
+          <a class="btn small" href="#p7">➡️ Voir la vie scolaire</a>
+          <a class="btn ghost small" href="#p1">⬆️ Couverture</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- LE SAVIEZ-VOUS -->
-    <section class="page" id="saviezvous">
-      <div class="page-head">
-        <h2>💡 Le saviez-vous ?</h2>
-        <div class="chips">
-          <span class="chip">⚡ Fun facts</span>
-          <span class="chip">🧠 Curiosités</span>
-        </div>
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Personnalité</span>
+      <span class="foot-right">Page 4</span>
+    </footer>
+  </section>
+
+  <!-- PAGE 5 : Créatures (cartes cliquables + sticker) -->
+  <section class="page" id="p5">
+    <div class="header">
+      <h2>🐾 Monde des créatures</h2>
+      <div class="chips">
+        <span class="chip">🌊 Nature</span>
+        <span class="chip">🧠 Faits étonnants</span>
       </div>
+    </div>
 
-      <div class="grid two">
-        <div class="card">
-          <h3>✨ 5 infos étonnantes</h3>
-          <ul class="list">
-            <li>🧠 Le cerveau consomme ~20% de l’énergie du corps.</li>
-            <li>🐙 Les poulpes ont trois cœurs.</li>
-            <li>☀️ La lumière du Soleil met ~8 minutes pour arriver sur Terre.</li>
-            <li>❄️ Le plus grand désert du monde est l’Antarctique.</li>
-            <li>⚡ Un éclair peut être plus chaud que la surface du Soleil.</li>
-          </ul>
+    <div class="grid-2">
+      <article class="card">
+        <h3>🐬 Le dauphin</h3>
+        <ul class="list">
+          <li>🏠 <strong>Habitat :</strong> mers & océans</li>
+          <li>🍽 <strong>Alimentation :</strong> poissons, calamars</li>
+          <li>🧩 <strong>Fait étonnant :</strong> communication par sons</li>
+        </ul>
+
+        <div class="callout">
+          ✅ <strong>Pourquoi il est important :</strong> il fait partie de l’équilibre de l’écosystème marin.
         </div>
 
-        <div class="card">
-          <h3>🧩 Mini-quiz rapide</h3>
-          <ol class="list">
-            <li>Quelle planète est la plus proche du Soleil ?</li>
-            <li>Combien de continents existe-t-il ?</li>
-            <li>Quel animal est le plus rapide sur terre ?</li>
-          </ol>
-          <div class="hint">👉 Réponses en bas dans “Coin détente”</div>
+        <div class="mini-strip">
+          <a class="chip-link" href="#p6">💡 Passer aux curiosités</a>
+          <a class="chip-link" href="#p8">🎲 Aller aux jeux</a>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- CULTURE & SCIENCE -->
-    <section class="page" id="culture">
-      <div class="page-head">
-        <h2>🔬 Culture & Science</h2>
-        <div class="chips">
-          <span class="chip">🤖 Tech</span>
-          <span class="chip">📖 Culture</span>
+      <div class="card sticker-card">
+        <h3>🎨 Sticker</h3>
+        <div class="sticker">
+          <div class="st-emoji">🐬</div>
+          <div class="st-title">Dauphin</div>
+          <div class="st-sub">Ami des mers 🌊</div>
         </div>
-      </div>
 
-      <div class="grid two">
-        <article class="card">
-          <h3>🤖 L’intelligence artificielle à l’école</h3>
-          <p>
-            L’intelligence artificielle (IA) aide les outils numériques à apprendre à partir de données.
-            En éducation, elle peut proposer des exercices adaptés au niveau de l’élève et donner un feedback rapide.
-          </p>
-          <p class="callout">✅ À retenir : l’IA peut aider, mais elle ne remplace pas le professeur.</p>
-        </article>
-
-        <article class="card">
-          <h3>🎭 Culture : idée de rubrique</h3>
+        <details class="details">
+          <summary>🔁 Changer l’animal (clique)</summary>
           <p class="muted">
-            Remplacez ce bloc par : un livre conseillé, un film éducatif, une expo, ou une fête culturelle.
+            Remplacez “Dauphin” par : 🦊 renard, 🦉 hibou, 🐝 abeille, 🐢 tortue, 🐫 dromadaire…
           </p>
-          <div class="stickers">
-            <span>📚</span><span>🎬</span><span>🎨</span><span>🎶</span>
-          </div>
-        </article>
+        </details>
       </div>
-    </section>
+    </div>
 
-    <!-- VIE SCOLAIRE -->
-    <section class="page" id="viescolaire">
-      <div class="page-head">
-        <h2>🎒 Activités de la vie scolaire</h2>
-        <div class="chips">
-          <span class="chip">⚽ Sport</span>
-          <span class="chip">🎭 Culture</span>
-          <span class="chip">🧪 Ateliers</span>
-        </div>
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Créatures</span>
+      <span class="foot-right">Page 5</span>
+    </footer>
+  </section>
+
+  <!-- PAGE 6 : Le saviez-vous + Culture & Science (cartes + quiz interactif) -->
+  <section class="page" id="p6">
+    <div class="header">
+      <h2>💡 Le saviez-vous ? + 🔬 Culture & Science</h2>
+      <div class="chips">
+        <span class="chip">⚡ Fun facts</span>
+        <span class="chip">🧪 Science</span>
       </div>
+    </div>
 
-      <div class="grid two">
-        <div class="card">
-          <h3>📌 Activité 1 — [Date]</h3>
-          <p>[Résumé 4–6 lignes : objectif, participants, résultat.]</p>
-        </div>
-        <div class="card">
-          <h3>📌 Activité 2 — [Date]</h3>
-          <p>[Résumé 4–6 lignes.]</p>
-        </div>
-        <div class="card">
-          <h3>📌 Activité 3 — [Date]</h3>
-          <p>[Résumé 4–6 lignes.]</p>
-        </div>
-        <div class="card poster-small">
-          <h3>📸 Coin photos</h3>
-          <p class="muted">Ajoutez des images plus tard (facultatif). Pour l’instant, ce style fait “magazine”.</p>
-          <div class="photo-grid">
-            <div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="grid-2">
+      <div class="card">
+        <h3>💡 Le saviez-vous ?</h3>
+        <ul class="list">
+          <li>🧠 Le cerveau consomme ~20% de l’énergie du corps.</li>
+          <li>🐙 Les poulpes ont trois cœurs.</li>
+          <li>☀️ La lumière du Soleil met ~8 minutes pour arriver sur Terre.</li>
+          <li>❄️ Le plus grand désert du monde est l’Antarctique.</li>
+          <li>⚡ Un éclair peut être plus chaud que la surface du Soleil.</li>
+        </ul>
 
-    <!-- DÉTENTE -->
-    <section class="page" id="detente">
-      <div class="page-head">
-        <h2>🎲 Coin détente</h2>
-        <div class="chips">
-          <span class="chip">🧩 Jeux</span>
-          <span class="chip">😂 Fun</span>
+        <div class="tip">
+          👉 Astuce : mettez 1 image par rubrique plus tard, mais le style “carte” suffit déjà.
         </div>
       </div>
 
-      <div class="grid two">
-        <article class="card">
-          <h3>🧠 Devinettes</h3>
-          <ol class="list">
-            <li>Je parle sans bouche et j’entends sans oreilles. Qui suis-je ?</li>
-            <li>Plus je sèche, plus je deviens humide. Qui suis-je ?</li>
-            <li>Je monte mais je ne descends jamais. Qui suis-je ?</li>
-          </ol>
-          <div class="answers">
-            <strong>Réponses :</strong> l’écho — la serviette — l’âge
-          </div>
-        </article>
+      <div class="card">
+        <h3>🧩 Mini-quiz (révélations cliquables)</h3>
 
-        <article class="card">
-          <h3>✅ Réponses du mini-quiz</h3>
-          <ul class="list">
-            <li>☀️ Mercure</li>
-            <li>🌍 7 continents</li>
-            <li>🐆 Le guépard</li>
-          </ul>
-          <div class="tip">💡 Astuce : ajoutez un “mots croisés” plus tard si vous voulez.</div>
-        </article>
+        <details class="details">
+          <summary>1) Quelle planète est la plus proche du Soleil ?</summary>
+          <p><strong>Réponse :</strong> Mercure ☀️</p>
+        </details>
+
+        <details class="details">
+          <summary>2) Combien de continents existe-t-il ?</summary>
+          <p><strong>Réponse :</strong> 7 continents 🌍</p>
+        </details>
+
+        <details class="details">
+          <summary>3) Quel animal est le plus rapide sur terre ?</summary>
+          <p><strong>Réponse :</strong> Le guépard 🐆</p>
+        </details>
+
+        <div class="mini-strip">
+          <a class="btn small" href="#p8">🎲 Coin détente</a>
+          <a class="btn ghost small" href="#p7">🎒 Vie scolaire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🔬 Culture & Science — L’IA dans l’éducation</h3>
+      <p>
+        L’intelligence artificielle (IA) peut aider à personnaliser l’apprentissage : exercices adaptés,
+        feedback rapide, ressources ciblées. Elle complète le travail du professeur, sans le remplacer.
+      </p>
+      <div class="callout">
+        ✅ <strong>À retenir :</strong> l’IA = un outil d’aide, pas une solution magique.
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Curiosités & Science</span>
+      <span class="foot-right">Page 6</span>
+    </footer>
+  </section>
+
+  <!-- PAGE 7 : Vie scolaire (timeline cliquable) -->
+  <section class="page" id="p7">
+    <div class="header">
+      <h2>🎒 Activités de la vie scolaire</h2>
+      <div class="chips">
+        <span class="chip">📸 Moments</span>
+        <span class="chip">🏆 Projets</span>
+      </div>
+    </div>
+
+    <div class="timeline card">
+      <h3>🗓 Timeline (clique chaque activité)</h3>
+
+      <details class="details" open>
+        <summary>📌 Activité 1 — [Date] : [Titre]</summary>
+        <p>[Résumé 4–6 lignes : objectif, participants, résultat.]</p>
+      </details>
+
+      <details class="details">
+        <summary>📌 Activité 2 — [Date] : [Titre]</summary>
+        <p>[Résumé 4–6 lignes.]</p>
+      </details>
+
+      <details class="details">
+        <summary>📌 Activité 3 — [Date] : [Titre]</summary>
+        <p>[Résumé 4–6 lignes.]</p>
+      </details>
+
+      <div class="photo-grid">
+        <div class="ph">📷 Photo</div><div class="ph">📷 Photo</div>
+        <div class="ph">📷 Photo</div><div class="ph">📷 Photo</div>
+      </div>
+      <p class="muted">Vous pouvez remplacer “📷 Photo” par des vraies images plus tard.</p>
+    </div>
+
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Vie scolaire</span>
+      <span class="foot-right">Page 7</span>
+    </footer>
+  </section>
+
+  <!-- PAGE 8 : Coin détente (cartes cliquables + devinettes) -->
+  <section class="page" id="p8">
+    <div class="header">
+      <h2>🎲 Coin détente</h2>
+      <div class="chips">
+        <span class="chip">🧠 Devinettes</span>
+        <span class="chip">😂 Fun</span>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>🧠 Devinettes</h3>
+
+        <details class="details">
+          <summary>1) Je parle sans bouche et j’entends sans oreilles. Qui suis-je ?</summary>
+          <p><strong>Réponse :</strong> L’écho 🔊</p>
+        </details>
+
+        <details class="details">
+          <summary>2) Plus je sèche, plus je deviens humide. Qui suis-je ?</summary>
+          <p><strong>Réponse :</strong> La serviette 🧻</p>
+        </details>
+
+        <details class="details">
+          <summary>3) Je monte mais je ne descends jamais. Qui suis-je ?</summary>
+          <p><strong>Réponse :</strong> L’âge 🎂</p>
+        </details>
+
+        <div class="mini-strip">
+          <a class="btn small" href="#p1">⬆️ Retour couverture</a>
+          <a class="btn ghost small" href="#p2">📌 Sommaire</a>
+        </div>
       </div>
 
-      <footer class="bottom">
-        <a class="btn ghost" href="#couverture">⬆️ Retour à la couverture</a>
-      </footer>
-    </section>
+      <div class="card">
+        <h3>🎯 Défi express</h3>
+        <p class="lead2">Clique et choisis un défi :</p>
 
-  </main>
+        <div class="challenge-grid">
+          <a class="challenge" href="#p5">🐾 Inventer 2 faits sur un animal</a>
+          <a class="challenge" href="#p6">💡 Ajouter 3 “Le saviez-vous ?”</a>
+          <a class="challenge" href="#p7">🎒 Écrire 1 activité en 5 lignes</a>
+          <a class="challenge" href="#p4">🌟 Ajouter une citation inspirante</a>
+        </div>
+
+        <div class="note">
+          ✅ Ça rend le journal vivant + interactif (clics + mini-défis).
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span class="foot-left">Journal scolaire — Détente</span>
+      <span class="foot-right">Page 8</span>
+    </footer>
+  </section>
+
+</main>
 
 </body>
 </html>
