@@ -366,3 +366,39 @@ body{
 }
 
 .bottom{margin-top: 14px; display:flex; justify-content: flex-end;}
+/* ===== FORMAT A4 ===== */
+
+@page {
+  size: A4;
+  margin: 15mm;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 15mm;
+  margin: 10mm auto;
+  background: white;
+  color: black;
+  page-break-after: always;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+.topbar, .nav {
+  display: none; /* cache le menu pour impression */
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  color: black;
+}
+
+h1, h2, h3 {
+  color: #111;
+}
