@@ -1,291 +1,107 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Journal Scolaire - Numéro 1</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* Impression A4 + pages */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+body { background: #f3f4f6; }
 
-  <!-- PAGE 1 : Couverture -->
-  <section class="page cover" id="p1">
-    <div class="cover-top">
-      <h1>LE JOURNAL DE [NOM ÉTABLISSEMENT]</h1>
-      <p class="subtitle">Numéro 1 — [Date] — Groupe MN 5 L 8</p>
-    </div>
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 12mm;
+  margin: 10mm auto;
+  background: #fff;
+  position: relative;
+  page-break-after: always;
+  border: 1px solid #e5e7eb;
+}
 
-    <div class="cover-hero">
-      <div class="cover-image">
-        <!-- Remplacez l'image -->
-        <img src="images/couverture.jpg" alt="Photo de couverture" onerror="this.style.display='none'">
-        <div class="img-placeholder">Placez une image : images/couverture.jpg</div>
-      </div>
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10mm;
+  border-bottom: 2px solid #111827;
+  padding-bottom: 6px;
+}
+.header h2 { margin: 0; font-size: 22px; color: #111827; }
+.tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid #111827;
+  border-radius: 999px;
+}
 
-      <div class="cover-box">
-        <h2>À la une</h2>
-        <ul>
-          <li>👤 Personnalité du numéro : [Nom]</li>
-          <li>🐾 Monde des créatures : [Animal]</li>
-          <li>🔬 Culture & Science : [Sujet]</li>
-          <li>🎲 Coin détente : jeux & devinettes</li>
-        </ul>
-      </div>
-    </div>
+.footer {
+  position: absolute;
+  left: 12mm;
+  right: 12mm;
+  bottom: 10mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #374151;
+}
 
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">1</span>
-    </footer>
-  </section>
+.cover .footer { color: #111827; }
+.page-no { font-weight: 700; }
 
-  <!-- PAGE 2 : Éditorial + Sommaire -->
-  <section class="page" id="p2">
-    <header class="header">
-      <h2>Éditorial</h2>
-      <div class="tag">Numéro 1</div>
-    </header>
+.cols { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 10mm; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
 
-    <div class="cols">
-      <article class="card">
-        <h3>Mot de l’équipe</h3>
-        <p>
-          Chers lecteurs, <br>
-          Bienvenue dans le premier numéro de notre journal scolaire. À travers ces pages, nous vous présentons
-          la vie de notre établissement, une personnalité inspirante, des informations surprenantes, un voyage
-          dans le monde animal, un coin culture & science, et un espace détente.
-        </p>
-        <p><strong>Bonne lecture !</strong></p>
-        <p class="signature">— L’équipe MN 5 L 8</p>
-      </article>
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  background: #ffffff;
+}
+.card h3 { margin-top: 0; margin-bottom: 8px; font-size: 16px; }
+.small { font-size: 12px; color: #374151; }
+.signature { margin-top: 14px; font-style: italic; }
 
-      <aside class="card">
-        <h3>Sommaire</h3>
-        <ol class="sommaire">
-          <li>Présentation de l’établissement … <span>p.3</span></li>
-          <li>Personnalité du numéro … <span>p.4</span></li>
-          <li>Monde des créatures … <span>p.5</span></li>
-          <li>Le saviez-vous ? + Culture & Science … <span>p.6</span></li>
-          <li>Vie scolaire … <span>p.7</span></li>
-          <li>Coin détente … <span>p.8</span></li>
-        </ol>
-      </aside>
-    </div>
+.bullets { padding-left: 18px; margin: 0; }
+.bullets li { margin: 6px 0; }
 
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">2</span>
-    </footer>
-  </section>
+.sommaire { padding-left: 18px; }
+.sommaire li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
 
-  <!-- PAGE 3 : Présentation établissement -->
-  <section class="page" id="p3">
-    <header class="header">
-      <h2>Présentation de l’établissement</h2>
-      <div class="tag">Qui sommes-nous ?</div>
-    </header>
+.cover {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+}
+.cover-top h1 { margin: 0; font-size: 34px; letter-spacing: 0.5px; }
+.subtitle { margin: 6px 0 0 0; color: #374151; }
 
-    <div class="grid-2">
-      <article class="card">
-        <h3>Notre établissement en bref</h3>
-        <ul class="bullets">
-          <li><strong>Nom :</strong> [Nom]</li>
-          <li><strong>Localisation :</strong> [Ville / Quartier]</li>
-          <li><strong>Nos valeurs :</strong> [Ex : respect, effort, réussite…]</li>
-          <li><strong>Nos filières / niveaux :</strong> [ … ]</li>
-          <li><strong>Nos clubs :</strong> [ … ]</li>
-        </ul>
-        <p>
-          <strong>Petit mot :</strong> [Décrivez l’ambiance, les objectifs, ce qui rend l’établissement spécial…]
-        </p>
-      </article>
+.cover-hero { margin-top: 14mm; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 10mm; }
+.cover-image, .mini-img {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9fafb;
+  position: relative;
+  min-height: 120px;
+}
+.cover-image img, .mini-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-placeholder {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #6b7280;
+  padding: 10px; text-align: center;
+}
 
-      <div class="card">
-        <h3>Galerie</h3>
-        <div class="mini-gallery">
-          <div class="mini-img">
-            <img src="images/ecole1.jpg" alt="Photo 1" onerror="this.style.display='none'">
-            <div class="img-placeholder">images/ecole1.jpg</div>
-          </div>
-          <div class="mini-img">
-            <img src="images/ecole2.jpg" alt="Photo 2" onerror="this.style.display='none'">
-            <div class="img-placeholder">images/ecole2.jpg</div>
-          </div>
-          <div class="mini-img">
-            <img src="images/ecole3.jpg" alt="Photo 3" onerror="this.style.display='none'">
-            <div class="img-placeholder">images/ecole3.jpg</div>
-          </div>
-        </div>
-      </div>
-    </div>
+.mini-gallery { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.activity { padding: 8px 0; border-top: 1px solid #e5e7eb; }
+.activity h4 { margin: 0 0 6px 0; }
 
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">3</span>
-    </footer>
-  </section>
-
-  <!-- PAGE 4 : Personnalité du numéro -->
-  <section class="page" id="p4">
-    <header class="header">
-      <h2>Personnalité du numéro</h2>
-      <div class="tag">Interview</div>
-    </header>
-
-    <div class="grid-2">
-      <article class="card">
-        <h3>[Nom de la personne]</h3>
-        <p><strong>Rôle :</strong> [Prof/Élève/Personnel] — <strong>Qualité :</strong> [ex : engagé(e), créatif(ve)…]</p>
-        <p>
-          <strong>Portrait :</strong> [Petite bio (6–8 lignes) : parcours, passion, ce qu’on admire…]
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Mini-interview</h3>
-        <div class="qa">
-          <p><strong>Q1.</strong> Depuis quand êtes-vous dans l’établissement ?<br><em>R :</em> …</p>
-          <p><strong>Q2.</strong> Qu’est-ce qui vous motive le plus ?<br><em>R :</em> …</p>
-          <p><strong>Q3.</strong> Un conseil aux élèves ?<br><em>R :</em> …</p>
-          <p><strong>Q4.</strong> Votre livre/film préféré ?<br><em>R :</em> …</p>
-        </div>
-      </article>
-    </div>
-
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">4</span>
-    </footer>
-  </section>
-
-  <!-- PAGE 5 : Monde des créatures -->
-  <section class="page" id="p5">
-    <header class="header">
-      <h2>Monde des créatures</h2>
-      <div class="tag">Monde animal</div>
-    </header>
-
-    <div class="cols">
-      <article class="card">
-        <h3>[Animal du jour]</h3>
-        <p><strong>Habitat :</strong> …</p>
-        <p><strong>Alimentation :</strong> …</p>
-        <p><strong>Fait étonnant :</strong> …</p>
-        <p><strong>Pourquoi il est important :</strong> …</p>
-      </article>
-
-      <div class="card">
-        <h3>Photo / Illustration</h3>
-        <div class="cover-image">
-          <img src="images/animal.jpg" alt="Animal" onerror="this.style.display='none'">
-          <div class="img-placeholder">images/animal.jpg</div>
-        </div>
-        <p class="small">Légende : [écrivez une légende courte]</p>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">5</span>
-    </footer>
-  </section>
-
-  <!-- PAGE 6 : Le saviez-vous + Culture & Science -->
-  <section class="page" id="p6">
-    <header class="header">
-      <h2>Le saviez-vous ? + Culture & Science</h2>
-      <div class="tag">Curiosités</div>
-    </header>
-
-    <div class="grid-2">
-      <article class="card">
-        <h3>Le saviez-vous ?</h3>
-        <ul class="bullets">
-          <li>[Info 1]</li>
-          <li>[Info 2]</li>
-          <li>[Info 3]</li>
-          <li>[Info 4]</li>
-          <li>[Info 5]</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Culture & Science</h3>
-        <p><strong>Sujet :</strong> [Titre du sujet]</p>
-        <p>[Expliquez en 10–12 lignes : de façon simple, avec un exemple.]</p>
-        <p class="small"><strong>À retenir :</strong> [1 phrase clé]</p>
-      </article>
-    </div>
-
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">6</span>
-    </footer>
-  </section>
-
-  <!-- PAGE 7 : Activités de la vie scolaire -->
-  <section class="page" id="p7">
-    <header class="header">
-      <h2>Vie scolaire</h2>
-      <div class="tag">Activités</div>
-    </header>
-
-    <article class="card">
-      <h3>Nos activités récentes</h3>
-      <div class="activity">
-        <h4>1) [Activité 1] — [Date]</h4>
-        <p>[Résumé (4–6 lignes) : objectif, participants, résultat.]</p>
-      </div>
-      <div class="activity">
-        <h4>2) [Activité 2] — [Date]</h4>
-        <p>[Résumé…]</p>
-      </div>
-      <div class="activity">
-        <h4>3) [Activité 3] — [Date]</h4>
-        <p>[Résumé…]</p>
-      </div>
-    </article>
-
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">7</span>
-    </footer>
-  </section>
-
-  <!-- PAGE 8 : Coin détente -->
-  <section class="page" id="p8">
-    <header class="header">
-      <h2>Coin détente</h2>
-      <div class="tag">Jeux</div>
-    </header>
-
-    <div class="grid-2">
-      <article class="card">
-        <h3>Devinettes</h3>
-        <ol>
-          <li>Je parle sans bouche et j’entends sans oreilles. Qui suis-je ?</li>
-          <li>Plus je sèche, plus je deviens humide. Qui suis-je ?</li>
-          <li>Je monte mais je ne descends jamais. Qui suis-je ?</li>
-        </ol>
-        <p class="small"><strong>Réponses :</strong> (à mettre en bas) …</p>
-      </article>
-
-      <article class="card">
-        <h3>Mini-quiz</h3>
-        <ol>
-          <li>Quelle planète est la plus proche du Soleil ?</li>
-          <li>Combien de continents existe-t-il ?</li>
-          <li>Quel animal est le plus rapide sur terre ?</li>
-        </ol>
-        <p class="small"><strong>Réponses :</strong> …</p>
-      </article>
-    </div>
-
-    <footer class="footer">
-      <span>Journal scolaire</span>
-      <span class="page-no">8</span>
-    </footer>
-  </section>
-
-</body>
-</html>
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; border: none; }
+}
