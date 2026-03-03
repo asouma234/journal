@@ -127,7 +127,7 @@ body{
   }
 }
 
-/* Typography (GROS + lisible) */
+/* Typography (gros + lisible) */
 h1{margin:10px 0 10px 0; font-size: 46px; line-height: 1.04}
 h2{margin:0; font-size: 26px}
 h3{margin:0 0 10px 0; font-size: 18px}
@@ -252,7 +252,7 @@ h3{margin:0 0 10px 0; font-size: 18px}
 .staff-role{font-size: 13px; color: var(--muted); font-weight: 800}
 .arrow{margin-left:auto; font-size: 20px; color: var(--muted); font-weight: 900}
 
-/* QA rows */
+/* QA */
 .qa{
   display:flex;
   align-items:center;
@@ -268,6 +268,12 @@ h3{margin:0 0 10px 0; font-size: 18px}
   margin-top: 10px;
 }
 .qa span{color: var(--muted); font-size: 18px}
+
+.qa-block{
+  display:block;
+}
+.qa-q{font-weight: 950; margin-bottom: 6px}
+.qa-a{font-weight: 750; color: var(--muted); line-height: 1.45}
 
 /* Color variants for cards */
 .c1{background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(43,124,255,.10));}
